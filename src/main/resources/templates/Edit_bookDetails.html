@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+			background-image: url(https://www.thecreativepenn.com/wp-content/uploads/2019/06/bigstock-Librarian-Looking.jpg);
+			background-position: cover;
+			background-size: cover;
+		}
+		h1{
+			text-align: center;
+			font-size: 50px;
+            color:deeppink;
+           margin-left: -20px;
+		}
+		td{
+		    margin-top: 10px;
+		    color:white;
+		}
+#login{
+			background: linear-gradient(45deg,red,green,blue);
+			text-align: center;
+			width: 30%;
+			margin-left: 490px;
+			margin-top: 60px;
+			padding: 20px;
+			border-radius: 25px 0 25px 0;
+			
+		}
+		input[type="text"],input[type="date"]
+		{
+			margin-top: 23px;
+			width:230px;
+			height: 30px;
+			border: none;
+			
+			background: none;
+			color:white;
+			border-bottom: 2px solid white;
+		}
+		input[type="submit"]{
+			background: linear-gradient(45deg,blue,red,green);
+			color: white;
+			margin-top: 15px;
+			width: 40%;
+			border-radius: 25px;
+
+		}
+		input[type="Submit"]:hover{
+			box-shadow: 0 0 10px purple;
+			cursor: pointer;
+			font-weight: bold;
+
+		}
+		::Placeholder{
+			color: white;
+
+		}
+		
+		
+</style>
+</style>
+</head>
+<body>
+<h1 align="center">Edit BookDetails</h1>
+<form th:action="@{/book/save}" th:object="${book}">
+<table align="center">
+<tr>
+<td>Name</td>
+<td><input type="text" th:field="*{id}" readonly="readonly"></td>
+</tr>
+</tr>
+<tr>
+<td>Name</td>
+<td><input type="text" th:field="*{title}"></td>
+</tr>
+<td>Tag Name</td>
+<td><input type="text" th:field="*{tag}"></td>
+</tr>
+<td>Author Name</td>
+<td><input type="text" th:field="*{authors}"></td>
+</tr>
+<td>Publisher Name</td>
+<td><input type="text" th:field="*{publisher}"></td>
+</tr>
+<td>Status</td>
+<td><input type="text" th:field="*{status}"></td>
+</tr>
+<td>Select Date</td>
+<td><input type="date" th:field="*{createdate}"></td>
+</tr>
+ <tr>
+ 
+  <td colspan="7"><input type="submit"></input></td>
+  </tr>
+</table>
+</form>
+</body>
+</html>
