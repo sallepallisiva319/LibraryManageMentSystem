@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+h1{
+text-align:center;
+color:red;
+background-color: yellow;
+display:inline-block;
+margin-left: 550px;
+margin-top: 20px;
+}
+
+table{
+  color:blue;
+  background-color:yellow;
+}
+a:hover{
+  box-shadow: 2px 2px blue;
+  
+}
+.a1{
+  text-decoration: none;
+  padding:5px;
+  border: 10px;
+  border-radius: 5px;
+  background-color: green;
+ 
+  color: white;
+  
+}
+div{
+ margin-left:670px;
+  margin-bottom: 20px;
+}
+body {
+	background-image: url(https://image.shutterstock.com/image-photo/book-stack-on-wood-desk-260nw-1017025384.jpg)
+}
+</style>
+</head>
+<body>
+
+<h1 align="center">Library Book Contoller Data</h1>
+<div><a class="a1" href="newbook" >Add New Books</a></div>
+<table border="1" width="70%" align="center" cellspacing="0" cellpadding="10">
+<thead>
+<tr>
+<th colspan="9">Books Details</th>
+</tr>
+<tr>
+<th>Id</th>
+<th>Title</th>
+<th>Tag</th>
+<th>Authors</th>
+<th>Publishers</th>
+<th>Status</th>
+<th>Date</th>
+<th colspan="2" align="center">Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr th:each="book :${booklist}">
+<td th:text=${book.id}></td>
+<td th:text=${book.title}></td>
+<td th:text=${book.Tag}></td>
+<td th:text=${book.Authors}></td>
+<td th:text=${book.publisher}></td>
+<td th:text=${book.status}></td>
+<td th:text=${book.createdate}></td>
+<td><a th:href="@{'/book/edit/'+${book.id}}">EditBookDetails</a></td>
+<td><a th:href="@{'/book/delete/'+${book.id}}">DeleteBookDetails</a></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

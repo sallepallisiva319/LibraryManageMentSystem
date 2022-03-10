@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+   background-image: url(https://upload.wikimedia.org/wikipedia/commons/7/72/NYC_-_New_York_City_Library_-_1723.jpg);
+   background-position: cover;
+}
+div{
+  margin-top: 200px;
+  
+}
+h1{
+   color:blue;
+   background-color: pink;
+   text-align: center;
+   display: inline-block;
+}
+a{
+  
+  text-decoration: none;
+  padding:20px;
+  border: 10px;
+  border-radius: 5px;
+  background-color: green;
+ 
+  color: white;
+  
+}
+
+</style>
+</head>
+<body>
+<div align="center">
+<h1>Library Management System</h1>
+<br>
+<a th:href="@{/book/}">View Books Details</a>
+</div>
+</body>
+</html>

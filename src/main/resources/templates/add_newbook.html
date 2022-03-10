@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+			background-image: url(https://www.thecreativepenn.com/wp-content/uploads/2019/06/bigstock-Librarian-Looking.jpg);
+			background-position: cover;
+			background-size: cover;
+		}
+		h1{
+			text-align: center;
+			font-size: 50px;
+            color:deeppink;
+           margin-left: -20px;
+		}
+		td{
+		    margin-top: 10px;
+		    color:white;
+		}
+#login{
+			background: linear-gradient(45deg,red,green,blue);
+			text-align: center;
+			width: 30%;
+			margin-left: 490px;
+			margin-top: 60px;
+			padding: 20px;
+			border-radius: 25px 0 25px 0;
+			
+		}
+		input[type="text"],input[type="date"]
+		{
+			margin-top: 23px;
+			width:230px;
+			height: 30px;
+			border: none;
+			
+			background: none;
+			color:white;
+			border-bottom: 2px solid white;
+		}
+		input[type="submit"]{
+			background: linear-gradient(45deg,blue,red,green);
+			color: white;
+			margin-top: 15px;
+			width: 40%;
+			border-radius: 25px;
+
+		}
+		input[type="Submit"]:hover{
+			box-shadow: 0 0 10px purple;
+			cursor: pointer;
+			font-weight: bold;
+
+		}
+		::Placeholder{
+			color: white;
+
+		}
+		
+		
+</style>
+</head>
+<body>
+<h1 align="center">Add New Book</h1>
+ <div id="login">
+<form th:action="@{/book/save}" th:object="${book}">
+<table align="center">
+<tr>
+<td>BookName</td>
+<div class="form-group">
+<td><input type="text" th:field="*{title}"></td>
+</div>
+</tr>
+<td>Tag Name</td>
+<div class="form-group">
+<td><input type="text" th:field="*{tag}"></td>
+</div>
+</tr>
+<td>Author Name</td>
+<div class="form-group">
+<td><input type="text" th:field="*{authors}"></td>
+</div>
+</tr>
+<td>Publisher Name</td>
+<div class="form-group">
+<td><input type="text" th:field="*{publisher}"></td>
+</div>
+</tr>
+<td>Status</td>
+<div class="form-group">
+<td><input type="text" th:field="*{status}"></td>
+</div>
+</tr>
+<td>Select Date</td>
+<div class="form-group">
+<td><input type="date" th:field="*{createdate}"></td>
+</div>
+</tr>
+ <tr>
+ 
+  <td colspan="6"><input type="submit"></input></td>
+  </tr>
+</table>
+</form>
+</div>
+</body>
+</html>
